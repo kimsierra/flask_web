@@ -8,7 +8,17 @@
 <body>
     <h1>Hello World!!</h1>
     <!-- 주석처리 ctrl+/ -->
-    {{data}}
+   
+    <form action="recommander" method="post"> <!-- 경로 보내기 ctrl+/ -->
+        <label for="lang">Your Favorite Movie</label>
+        <select name="mymovie" id="lang">
+            {% for i in data %}
+          <option value="{{i}}">{{i}}</option>
+     
+          {% endfor %}
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
     <h2>잘생긴 원빈</h2>
 </body>
 </html>
